@@ -8,11 +8,12 @@
      <meta http-equiv="x-ua-compatible" content="ie=edge">
  
      <!-- Bootstrap CSS -->
-     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-     <link rel="stylesheet" href="CSS/styles.css"> 
-    <title>Ristorante Con Fusion</title>
+      <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- endbuild -->
 </head>
 
 
@@ -32,8 +33,13 @@
                     <li class="nav-item"> <a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a> </li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
-                    <span class="fa fa-sign-in"></span> Login</a>
+                    <!-- <a data-toggle="modal" data-target="#loginModal">
+                    <span class="fa fa-sign-in"></span> Login</a> -->
+
+                    <a role="button" class="btn btn-block" id="login">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>    
+
                 </span>
             </div>
         </div>
@@ -91,7 +97,10 @@
                     <!-- <a role="button" class="btn btn-block nav-link btn-warning"
                     data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
                     data-placement="bottom" href="#reserveform">Reserve Table</a> -->
-                    <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>    
+                    <!-- <a role="button" class="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>     -->
+                    <a role="button" class="btn btn-block btn-warning"
+                    id="reserveTable">Reserve Table
+                </a>
                 </div>
             </div>
         </div>
@@ -102,7 +111,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Reserve a Table </h4>
+                    <h4 class="modal-title">Reserve a Table </h4> 
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -114,19 +123,19 @@
                                     <label class="form-check-label radio" style="padding-left: 15px;">  
                                         <input type="radio" class="form-check-input" id="numberofguest1" name="numberofguest" value="1"> 1 
                                     </label>
-                                    <label class="form-check-label radio">
+                                    <label class="form-check-label radio" style="padding-left: 15px;">
                                         <input type="radio" class="form-check-input " id="numberofguest2" name="numberofguest" value="2"> 2
                                     </label>
-                                    <label class="form-check-label radio">
+                                    <label class="form-check-label radio" style="padding-left: 15px;">
                                         <input type="radio" class="form-check-input " id="numberofguest3" name="numberofguest" value="3"> 3
                                     </label>
-                                    <label class="form-check-label radio">
+                                    <label class="form-check-label radio" style="padding-left: 15px;">
                                         <input type="radio" class="form-check-input " id="numberofguest4" name="numberofguest" value="4"> 4
                                     </label>
-                                    <label class="form-check-label radio">
+                                    <label class="form-check-label radio" style="padding-left: 15px;">
                                         <input type="radio" class="form-check-input " id="numberofguest5" name="numberofguest" value="5"> 5
                                     </label>
-                                    <label class="form-check-label radio">
+                                    <label class="form-check-label radio"style="padding-left: 15px;">
                                         <input type="radio" class="form-check-input " id="numberofguest6" name="numberofguest" value="6"> 6
                                     </label>
                                 </div> 
@@ -376,17 +385,19 @@
         </div>
     </footer>
      <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-     <script src="js/scripts.js"></script>
+   <!-- build:js js/main.js -->
+   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+   <script src="js/scripts.js"></script>
+   <!-- endbuild -->
      <!-- This is for Tooltip -->
      <!-- <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         });
     </script> -->
-    <script>
+    <!-- <script>
           $("#carouselButton").click(function(){
                 if ($("#carouselButton").children("span").hasClass('fa-pause')) {
                     $("#mycarousel").carousel('pause');
@@ -402,7 +413,7 @@
             $(document).ready(function(){
                 $("#mycarousel").carousel( { interval: 2000 } );
         }); 
-    </script>
+    </script> -->
 
 </body>
 
